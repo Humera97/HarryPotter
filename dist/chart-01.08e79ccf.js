@@ -33566,13 +33566,13 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 d3.tip = _d3Tip.default;
 var margin = {
-  top: 50,
-  left: 200,
-  right: 200,
-  bottom: 30
+  top: 30,
+  left: 115,
+  right: 300,
+  bottom: 70
 };
 var height = 700 - margin.top - margin.bottom;
-var width = 950 - margin.left - margin.right;
+var width = 1000 - margin.left - margin.right;
 var svg = d3.select('#chart').append('svg').attr('height', height + margin.top + margin.bottom).attr('width', width + margin.left + margin.right).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')'); // Create our scales
 
 var xPositionScale = d3.scaleLinear().domain([0, 350]).range([0, width]);
@@ -33657,7 +33657,7 @@ function ready(datapoints) {
   //     'Potter: his best friends, family, his teachers. From these characters, who talks the most? '
   //   )
 
-  svg.append('g').attr('class', 'axis y-axis').attr('transform', 'translate(' + 200 + ', 0 + )').call(yAxis).attr('font-family', 'Averia Libre').attr('font-weight', '800').attr('font-size', '16').attr('color', '#CBD2E2');
+  svg.append('g').attr('class', 'axis y-axis').attr('transform', 'translate(' + 200 + ', 0 + )').call(yAxis).attr('font-family', 'Averia Libre').attr('font-weight', '800').attr('font-size', '12').attr('color', '#CBD2E2');
 
   function makeYgridlines() {
     return d3.axisLeft(yPositionScale);

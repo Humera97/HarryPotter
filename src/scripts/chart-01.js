@@ -3,11 +3,11 @@ import d3Tip from 'd3-tip'
 import d3Annotation from 'd3-svg-annotation'
 d3.tip = d3Tip
 
-const margin = { top: 50, left: 200, right: 200, bottom: 30 }
+const margin = { top: 30, left: 115, right: 300, bottom: 70 }
 
 const height = 700 - margin.top - margin.bottom
 
-const width = 950 - margin.left - margin.right
+const width = 1000 - margin.left - margin.right
 
 const svg = d3
   .select('#chart')
@@ -173,7 +173,7 @@ function ready(datapoints) {
     .call(yAxis)
     .attr('font-family', 'Averia Libre')
     .attr('font-weight', '800')
-    .attr('font-size', '16')
+    .attr('font-size', '12')
     .attr('color', '#CBD2E2')
   function makeYgridlines() {
     return d3.axisLeft(yPositionScale)
